@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;400,600;0,700;500,800;1,300;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    /* height: 100vh; */
+}
+body::before {
+    content: "";
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    top: 0;
+    left: 0;
+    background: rgb(77, 103, 255);
+    z-index: -1;
+    
+}
+.container {
+    width: 100%;
+    /* display: none; */
+}
+
+.container .search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container h1 {
+    color: #fff;
+    padding: 5px 10px;
+}
+.container .search-bar{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 3px 0px 3px 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+    background: #fff;
+    
+}
+.container .search-bar #word {
+    border: none;
+    font-size: 18px;
+    padding: 3px;
+    outline: none;
+    color: #222;
+    font-weight: 400;
+    padding-left: 10px;
+    width: 85%;
+}
+.container .search-bar .delete-word {
+    border: none;
+    background: #fff;
+    padding: 5px;
+    border-left: 1px solid #777;
+    padding-left: 10px;
+    
+}
+.container .search-bar .delete-word i {
+    font-size: 13px;
+}
+#btn-search {
+    border: none;
+    border-radius: 50px;
+    background: rgb(77, 103, 255);
+    color: #fff;
+    padding: 10px 10px 9px 10px;
+
+}
+#btn-search i{
+    font-size: 17px;
+}
+.main {
+    padding: 20px 10px;
+    opacity: 0;
+    transition: visibility 0s, opacity 1s linear;
+    display: none;
+}
+.main h2 {
+    margin-bottom: 3px;
+    font-size: 26px;
+}
+
+.voice {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 7px;
+}
+.voice .voice-langue {
+    padding-right: 7px;
+}
+.voice a i {
+    color: #222;
+    cursor: pointer;
+}
+.voice  span {
+    padding: 0 10px;
+}
+.main .verb {
+    font-size: 16px;
+    font-style: italic;
+    color: rgb(72, 167, 255);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.label-c {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.meaning {
+    margin-bottom: 12px;
+}
+#meaning-val {
+    padding: 0 0 0 10px;
+}
+.example-list {
+    padding:  0 0 5px 0px;
+
+}
+ul {
+    padding: 0px 0 0 25px;
+}
+#author {
+    position: fixed;
+    bottom: 25px;
+    left: 30px;
+    background: rgb(81, 107, 255);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 20px;
+    border-radius: 50px;
+    display: none;
+}
+.star {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(81, 107, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    animation: alternate;  
+}
+.star i {
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+}
+.slide-container {
+    padding: 0 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-top: 40px;
+    /* display: none; */
+}
+.slide-list {
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    overflow-x: auto;
+}
+.slide-list::-webkit-scrollbar {
+    display: none;
+}
+.slide-items{
+    width: 200px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 16px;
+    background: #fff;
+
+    box-shadow:  0px 0px 19px 5px rgba(0, 0, 0, 0.1);
+}
+.slide-items h2{
+    width: 200px;
+    text-align: center;
+}
+/* source {
+    display: none;
+} */
+.loading {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    padding: 0 40px;
+    display: none;
+    transition:  0.4s;
+    
+    /* background: #222; */
+}
+.loading img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.note {
+    width: 100%;
+    text-align: center ;
+    padding: 20px;
+    transition: all 1s linear;
+    display: none;
+}
+.note p {
+    color: #222;
+    font-size: 18px;
+    font-weight: 400;
+}

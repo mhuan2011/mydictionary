@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>My dictionary</h1>
+        <div class="search">
+            <div class="search-bar">
+                <div>
+                    <input type="text" id="word">
+                    <button class="delete-word" onclick="deleteWord();"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <button id="btn-search"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="loading">
+            <img src="https://i.pinimg.com/originals/ed/2e/c8/ed2ec87072fd6cc5c42149ae082b2d51.gif" alt="">
+        </div>
+        <div class="note">
+            <p>No result</p>
+        </div>
+        <div class="main">
+            
+            <div class="show-main">
+                <h2 id="word-show"></h2>
+                <div class="verb">
+                    <p id="part-of-speech"></p>
+                </div>
+                <div class="voice">
+                    <p class="voice-langue">UK</p><i id="voice-1" class="fas fa-volume-up" onclick="playAudio1();"></i><span id="ipa-1"></span>
+                    <audio id="myAudio1">
+                        <source id="voice-ipa1" src="#" type="audio/ogg">
+                    </audio>
+                    
+                    <p class="voice-langue">US</p><i class="fas fa-volume-up" onclick="playAudio2();"></i><span id="ipa-2"></span>
+                    <audio id="myAudio2">
+                        <source id="voice-ipa2" src="#" type="audio/ogg">
+                    </audio>
+                </div>
+                <div class="meaning">
+                    <p class="label-c">Meaning</p>
+                    <div id="meaning-val">
+                        <!-- <p>used when meeting or greeting someone</p> -->
+                    </div>
+                    
+                </div>
+                <div class="example">
+                    <p class="label-c">Example</p>
+                    <ul id="example-list">
+                        <!-- <li><p >Hello, Paul. I haven't seen you for ages.</p></li> -->
+                    </ul> 
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide-list">
+                <div class="slide-items">
+                    <h2>area</h2>
+                </div>
+                <div class="slide-items">
+                    <h2>region</h2>
+                </div>
+                <div class="slide-items">
+                    <h2>setting</h2>
+                </div>
+                <div class="slide-items">
+                    <h2>districs</h2>
+                </div>
+                <div class="slide-items">
+                    <h2>color</h2>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="star" onclick="showAuthor();">
+        <i class="fas fa-star"></i>
+    </div>
+    
+    <p id="author">Code by mhuan_2011</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
